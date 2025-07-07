@@ -44,7 +44,7 @@ const CompanionForm = () => {
             topic: '',
             voice: '',
             style: '',
-            duration: 15,
+            duration: '',
         },
     })
 
@@ -62,7 +62,7 @@ const CompanionForm = () => {
                         <FormItem>
                             <FormLabel>Companion Name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter Companion Name" {...field} className="input" />
+                                <Input placeholder="Enter Companion Name" {...field} className="input"/>
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
@@ -76,12 +76,12 @@ const CompanionForm = () => {
                             <FormLabel>Subject</FormLabel>
                             <FormControl>
                                 <Select
-                                onValueChange={field.onChange}
-                                value={field.value}
-                                defaultValue={field.value}
+                                    onValueChange={field.onChange}
+                                    value={field.value}
+                                    defaultValue={field.value}
                                 >
                                     <SelectTrigger className="input capitalize">
-                                        <SelectValue placeholder="Select the Subject" />
+                                        <SelectValue placeholder="Select the Subject"/>
                                     </SelectTrigger>
                                     <SelectContent>
                                         {subjects.map((subject) => (
@@ -106,7 +106,7 @@ const CompanionForm = () => {
                         <FormItem>
                             <FormLabel>What Should the Companion Help With</FormLabel>
                             <FormControl>
-                                <Textarea  placeholder="Ex. Derivatives & Integrals" {...field} className="input" />
+                                <Textarea placeholder="Ex. Derivatives & Integrals" {...field} className="input"/>
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
@@ -125,15 +125,15 @@ const CompanionForm = () => {
                                     defaultValue={field.value}
                                 >
                                     <SelectTrigger className="input">
-                                        <SelectValue placeholder="Select the Voice" />
+                                        <SelectValue placeholder="Select the Voice"/>
                                     </SelectTrigger>
                                     <SelectContent>
-                                            <SelectItem value="male">
-                                                Male
-                                            </SelectItem>
+                                        <SelectItem value="male">
+                                            Male
+                                        </SelectItem>
                                         <SelectItem value="female">
-                                                Female
-                                            </SelectItem>
+                                            Female
+                                        </SelectItem>
 
                                     </SelectContent>
                                 </Select>
@@ -155,7 +155,7 @@ const CompanionForm = () => {
                                     defaultValue={field.value}
                                 >
                                     <SelectTrigger className="input">
-                                        <SelectValue placeholder="Select the Style" />
+                                        <SelectValue placeholder="Select the Style"/>
                                     </SelectTrigger>
                                     <SelectContent>
                                         <SelectItem value="formal">
@@ -179,7 +179,7 @@ const CompanionForm = () => {
                         <FormItem>
                             <FormLabel>Estimated Session Duration in Minutes</FormLabel>
                             <FormControl>
-                                <Input type="number" placeholder="15" {...field} className="input" />
+                                <Input type="number" placeholder="15" {...field} className="input"/>
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
